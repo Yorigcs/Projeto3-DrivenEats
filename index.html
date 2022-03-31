@@ -19,99 +19,99 @@
             <p>Sua comida em 6 minutos</p>
         </section>
     </header>
-
+ 
     <main class="order_content">
-            <section class="dishes">
+            <section id="dishes" class="dishes">
                 <span>Primeiro, seu prato</span>
                 <div class="row-content">
-                    <div class="inner-content">
+                    <div class="inner-content" onclick="select_items(0,'dishes')">
                         <img src="imgs/coca.jpg" alt="coca">
                         <div class="content-text">
-                            <p> Frango Ying Tang</p>
+                            <p class="dishes_name"> Frango Ying Tang</p>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <p>R$ 14,90</p>
+                            <p class="dishes_price">R$ 14,95</p>
                         </div>
                     </div>
     
-                    <div class="inner-content">
+                    <div class="inner-content"  onclick="select_items(1,'dishes')">
                         <img src="imgs/coca.jpg" alt="coca">
                         <div class="content-text">
-                            <p> Coquinha gelada</p>
+                            <p class="dishes_name"> Coquinha gelada</p>
                             <p>Lata 350ml</p>
-                            <p>R$ 14,90</p>
+                            <p class="dishes_price">R$ 14,90</p>
                         </div>
                     </div>
     
-                    <div class="inner-content">
+                    <div class="inner-content"  onclick="select_items(2,'dishes')">
                         <img src="imgs/coca.jpg" alt="coca">
                         <div class="content-text">
-                            <p> Frango Ying Tang</p>
+                            <p class="dishes_name"> Frango Ying Tang</p>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <p>R$ 14,90</p>
+                            <p class="dishes_price">R$ 14,90</p>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <section class="drinks">
+            <section id="drinks" class="drinks">
                 <span>Agora, sua bebida</span>
                 <div class="row-content">
-                    <div class="inner-content">
+                    <div class="inner-content" onclick="select_items(0,'drinks')">
                         <img src="imgs/coca.jpg" alt="coca">
                         <div class="content-text">
-                            <p> Frango Ying Tang</p>
+                            <p class="drinks_name"> Frango Ying Tang</p>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <p>R$ 14,90</p>
+                            <p class="drinks_price">R$ 14,90</p>
                         </div>
                     </div>
     
-                    <div class="inner-content">
+                    <div class="inner-content" onclick="select_items(1,'drinks')">
                         <img src="imgs/coca.jpg" alt="coca">
                         <div class="content-text">
-                            <p> Coquinha gelada</p>
+                            <p class="drinks_name"> Coquinha gelada</p>
                             <p>Lata 350ml</p>
-                            <p>R$ 14,90</p>
+                            <p class="drinks_price">R$ 14,90</p>
                         </div>
                     </div>
     
-                    <div class="inner-content">
+                    <div class="inner-content" onclick="select_items(2,'drinks')">
                         <img src="imgs/coca.jpg" alt="coca">
                         <div class="content-text">
-                            <p> Frango Ying Tang</p>
+                            <p class="drinks_name"> Frango Ying Tang</p>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <p>R$ 14,90</p>
+                            <p class="drinks_price">R$ 14,90</p>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section class="deserts">
+            <section id="deserts" class="deserts">
                 <span>Por fim, sua sobremesa</span>
                 <div class="row-content">
-                    <div class="inner-content">
+                    <div class="inner-content" onclick="select_items(0,'deserts')">
                         <img src="imgs/coca.jpg" alt="coca">
                         <div class="content-text">
-                            <p> Frango Ying Tang</p>
+                            <p class="deserts_name"> Frango Ying Tang</p>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <p>R$ 14,90</p>
+                            <p class="deserts_price">R$ 14,90</p>
                         </div>
                     </div>
     
-                    <div class="inner-content">
+                    <div class="inner-content" onclick="select_items(1,'deserts')">
                         <img src="imgs/coca.jpg" alt="coca">
                         <div class="content-text">
-                            <p> Coquinha gelada</p>
+                            <p class="deserts_name"> Coquinha gelada</p>
                             <p>Lata 350ml</p>
-                            <p>R$ 14,90</p>
+                            <p class="deserts_price">R$ 14,90</p>
                         </div>
                     </div>
     
-                    <div class="inner-content">
+                    <div class="inner-content" onclick="select_items(2,'deserts')">
                         <img src="imgs/coca.jpg" alt="coca">
                         <div class="content-text">
-                            <p> Frango Ying Tang</p>
+                            <p class="deserts_name"> Frango Ying Tang</p>
                             <p>Um pouco de batata, um pouco de salada</p>
-                            <p>R$ 14,90</p>
+                            <p class="deserts_price">R$ 14,90</p>
                         </div>
                     </div>
                 </div>
@@ -120,8 +120,8 @@
     </main>
 
     <footer class="bottom-content">
-        <button class="button-order">Selecione os 3 itens para fechar o pedido</button>
+        <button class="button-order" type="button" disabled>Selecione os 3 itens para fechar o pedido</button>
     </footer>
-    
+    <script src="script.js"></script>
 </body>
 </html>
