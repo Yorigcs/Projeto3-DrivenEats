@@ -26,7 +26,7 @@ function select_items(i, menu) {
         dish_price = parseFloat(parentDOM.getElementsByClassName(menu + "_price")[i]
         .innerHTML.replace(",",".").replace("R$"," ")) ;
 
-        console.log(dish_name,dish_price);
+        //console.log(dish_name,dish_price);
 
     }
 
@@ -43,7 +43,7 @@ function select_items(i, menu) {
         drink_price = parseFloat(parentDOM.getElementsByClassName(menu + "_price")[i]
         .innerHTML.replace(",",".").replace("R$"," ")) ;
 
-        console.log(drink_name,drink_price);
+        //console.log(drink_name,drink_price);
     }
 
     if (menu === 'desserts') {
@@ -60,11 +60,11 @@ function select_items(i, menu) {
         dessert_price = parseFloat(parentDOM.getElementsByClassName(menu + "_price")[i]
         .innerHTML.replace(",",".").replace("R$"," ")) ;
 
-        console.log(dessert_name,dessert_price);
+        //console.log(dessert_name,dessert_price);
     }
 
     total_price = dish_price + drink_price +dessert_price;
-    console.log(total_price);
+    //console.log(total_price);
     
     const button = document.querySelector('.button-order');
     
@@ -93,8 +93,6 @@ function select_items(i, menu) {
 
             let name = prompt("Digite seu nome:","Fulano");
             let adress = prompt("Digite seu endereço","Rua...");
-
-        
 
             let txt = 'Olá, gostária de fazer o pedido:\n- Prato: ' + dish_name + 
             '\n- Bebida: ' + drink_name + '\n- Sobremesa: ' + dessert_name +
