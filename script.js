@@ -75,18 +75,25 @@ function select_items(i, menu) {
         
     }
 
+    document.getElementById('send-order').onclick = function() {
+        let name = prompt("Digite seu nome:","Fulano");
+        let adress = prompt("Digite seu endereço","Rua...");
+
+
+        const linkwhats = document.querySelector('.link');
+
+
+        let txt = 'Olá, gostária de fazer o pedido:\n- Prato: ' + dish_name + 
+        '\n- Bebida: ' + drink_name + '\n- Sobremesa: ' + dessert_name +
+        '\nTotal: R$ ' + total_price.toFixed(2) + '\n\nNome: ' + name +
+        '\nEndereço: ' + adress;
+
+        let enconded = encodeURIComponent(txt);
     
+        linkwhats.setAttribute('href','https://wa.me/?text=' + enconded)    
+    }
 
-    const linkwhats = document.querySelector('.link');
-
-
-    let txt = 'Olá, gostária de fazer o pedido:\n- Prato: ' + dish_name + 
-    '\n- Bebida: ' + drink_name + '\n- Sobremesa: ' + dessert_name +
-    '\nTotal: R$ ' + total_price.toFixed(2);
-
-    let enconded = encodeURIComponent(txt);
     
-    linkwhats.setAttribute('href','https://wa.me/?text=' + enconded)
 
 
 }
