@@ -1,5 +1,5 @@
-let dish_name  = '', drink_name  = '', desert_name = '';
-let dish_price = 0.0, drink_price  = 0.0, desert_price  = 0.0;
+let dish_name  = '', drink_name  = '', dessert_name = '';
+let dish_price = 0.0, drink_price  = 0.0, dessert_price  = 0.0;
 let total_price = 0.0;
 
 function select_items(i, menu) {
@@ -46,7 +46,7 @@ function select_items(i, menu) {
         console.log(drink_name,drink_price);
     }
 
-    if (menu === 'deserts') {
+    if (menu === 'desserts') {
 
         if(IsMultSelected >= 1) {
             for(let j = 0; j < ItemsNumb;j++) {
@@ -55,23 +55,39 @@ function select_items(i, menu) {
             parentDOM.getElementsByClassName("inner-content")[i].classList.add("selected_item");
         }
 
-        desert_name = parentDOM.getElementsByClassName(menu + "_name")[i].innerHTML;
+        dessert_name = parentDOM.getElementsByClassName(menu + "_name")[i].innerHTML;
 
-        desert_price = parseFloat(parentDOM.getElementsByClassName(menu + "_price")[i]
+        dessert_price = parseFloat(parentDOM.getElementsByClassName(menu + "_price")[i]
         .innerHTML.replace(",",".").replace("R$"," ")) ;
 
-        console.log(desert_name,desert_price);
+        console.log(dessert_name,dessert_price);
     }
 
-    total_price = dish_price + drink_price +desert_price;
+    total_price = dish_price + drink_price +dessert_price;
     console.log(total_price);
     
     const button = document.querySelector('.button-order');
     
-    if( dish_price != 0 && drink_price !=0 && desert_price != 0) {
+    if( dish_price !== 0 && drink_price !==0 && dessert_price !== 0) {
         button.removeAttribute("disabled");
         button.innerHTML = 'Fechar Pedido';
         button.style.backgroundColor = "#32B72F";
         
     }
+
+    
+
+    const linkwhats = document.querySelector('.link');
+
+
+    let txt = 'Olá, gostária de fazer o pedido:\n- Prato: ' + dish_name + 
+    '\n- Bebida: ' + drink_name + '\n- Sobremesa: ' + dessert_name +
+    '\nTotal: R$ ' + total_price.toFixed(2);
+
+    let enconded = encodeURIComponent(txt);
+    
+    linkwhats.setAttribute('href','https://wa.me/?text=' + enconded)
+
+
 }
+
