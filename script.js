@@ -75,26 +75,43 @@ function select_items(i, menu) {
         
     }
 
+    
+
     document.getElementById('send-order').onclick = function() {
-        let name = prompt("Digite seu nome:","Fulano");
-        let adress = prompt("Digite seu endereço","Rua...");
 
+        let ConfirmBox = document.querySelectorAll('.confirm_order span p');
+        ConfirmBox[0].innerHTML = dish_name;
+        ConfirmBox[1].innerHTML = dish_price;
+        ConfirmBox[2].innerHTML = drink_name;
+        ConfirmBox[3].innerHTML = drink_price;
+        ConfirmBox[4].innerHTML = dessert_name;
+        ConfirmBox[5].innerHTML = dessert_price
+        ConfirmBox[7].innerHTML = 'R$ ' + total_price;
+        document.getElementById('box-order').style.display  = "block";  
 
-        const linkwhats = document.querySelector('.link');
+        document.getElementById('confirm-order').onclick = function() {
 
+            let name = prompt("Digite seu nome:","Fulano");
+            let adress = prompt("Digite seu endereço","Rua...");
 
-        let txt = 'Olá, gostária de fazer o pedido:\n- Prato: ' + dish_name + 
-        '\n- Bebida: ' + drink_name + '\n- Sobremesa: ' + dessert_name +
-        '\nTotal: R$ ' + total_price.toFixed(2) + '\n\nNome: ' + name +
-        '\nEndereço: ' + adress;
+        
 
-        let enconded = encodeURIComponent(txt);
-    
-        linkwhats.setAttribute('href','https://wa.me/?text=' + enconded)    
+            let txt = 'Olá, gostária de fazer o pedido:\n- Prato: ' + dish_name + 
+            '\n- Bebida: ' + drink_name + '\n- Sobremesa: ' + dessert_name +
+            '\nTotal: R$ ' + total_price.toFixed(2) + '\n\nNome: ' + name +
+            '\nEndereço: ' + adress;
+
+            let enconded = encodeURIComponent(txt);
+            const linkwhats = document.querySelector('.link');
+            linkwhats.setAttribute('href','https://wa.me/?text=' + enconded)
+        }
+
+        document.getElementById('cancel-order').onclick = function() {
+            document.getElementById('box-order').style.display  = "none";
+
+           
+        }
     }
-
-    
-
 
 }
 
