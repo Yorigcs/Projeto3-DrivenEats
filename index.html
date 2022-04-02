@@ -21,134 +21,144 @@
     </header>
  
     <main class="order_content">
-            <section id="dishes" class="dishes">
+            <section class="dishes">
                 <span>Primeiro, seu prato</span>
                 <div class="row-content">
-                    <div class="inner-content" onclick="select_items(0,'dishes')">
+                    <div class="inner-content" onclick="select_dishes(this);isAllowButton()">
                         <img src="imgs/combo1.png" alt="Combo 1">
                         <div class="content-text">
-                            <p class="dishes_name"> Combo 1</p>
+                            <p class="name"> Combo 1</p>
                             <p>Combinado de Sushi</p>
-                            <p class="dishes_price">R$ 50,95</p>
+                            <p class="price">R$ 50,95</p>
+                            <ion-icon  name="checkmark-circle-outline"></ion-icon>
                         </div>
                     </div>
     
-                    <div class="inner-content"  onclick="select_items(1,'dishes')">
+                    <div class="inner-content"  onclick="select_dishes(this);isAllowButton()">
                         <img src="imgs/combo2.png" alt="Combo 2">
                         <div class="content-text">
-                            <p class="dishes_name"> Combo 2</p>
+                            <p class="name"> Combo 2</p>
                             <p>Combinado de Sushi</p>
-                            <p class="dishes_price">R$ 70,74</p>
+                            <p class="price">R$ 70,74</p>
+                            <ion-icon  name="checkmark-circle-outline"></ion-icon>
                         </div>
                     </div>
     
-                    <div class="inner-content"  onclick="select_items(2,'dishes')">
+                    <div class="inner-content"  onclick="select_dishes(this);isAllowButton()">
                         <img src="imgs/combo3.png" alt="Combo 3">
                         <div class="content-text">
-                            <p class="dishes_name"> Combo 3</p>
+                            <p class="name"> Combo 3</p>
                             <p>Combinado de Sushi</p>
-                            <p class="dishes_price">R$ 65,20</p>
+                            <p class="price">R$ 65,20</p>
+                            <ion-icon  name="checkmark-circle-outline"></ion-icon>
                         </div>
                     </div>
                 </div>
             </section>
             
-            <section id="drinks" class="drinks">
+            <section class="drinks">
                 <span>Agora, sua bebida</span>
                 <div class="row-content">
-                    <div class="inner-content" onclick="select_items(0,'drinks')">
+                    <div class="inner-content" onclick="select_drinks(this);isAllowButton()">
                         <img src="imgs/energetico.png" alt="energetico">
                         <div class="content-text">
-                            <p class="drinks_name"> Energético</p>
+                            <p class="name"> Energético</p>
                             <p>Lata 350ml</p>
-                            <p class="drinks_price">R$ 6,00</p>
+                            <p class="price">R$ 6,00</p>
+                            <ion-icon  name="checkmark-circle-outline"></ion-icon>
                         </div>
                     </div>
     
-                    <div class="inner-content" onclick="select_items(1,'drinks')">
+                    <div class="inner-content" onclick="select_drinks(this);isAllowButton()">
                         <img src="imgs/coca.jpg" alt="coca">
                         <div class="content-text">
-                            <p class="drinks_name"> Coca</p>
+                            <p class="name"> Coca</p>
                             <p>Lata 350ml</p>
-                            <p class="drinks_price">R$ 8,90</p>
+                            <p class="price">R$ 8,90</p>
+                            <ion-icon  name="checkmark-circle-outline"></ion-icon>
                         </div>
                     </div>
     
-                    <div class="inner-content" onclick="select_items(2,'drinks')">
+                    <div class="inner-content" onclick="select_drinks(this);isAllowButton()">
                         <img src="imgs/fanta.jpg"  alt="fanta">
                         <div class="content-text">
-                            <p class="drinks_name"> Fanta</p>
+                            <p class="name"> Fanta</p>
                             <p>Lata 350ml</p>
-                            <p class="drinks_price">R$ 7,90</p>
+                            <p class="price">R$ 7,90</p>
+                            <ion-icon  name="checkmark-circle-outline"></ion-icon>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section id="desserts" class="desserts">
+            <section class="desserts">
                 <span>Por fim, sua sobremesa</span>
                 <div class="row-content">
-                    <div class="inner-content" onclick="select_items(0,'desserts')">
+                    <div class="inner-content" onclick="select_desserts(this);isAllowButton()">
                         <img src="imgs/doce1.png" alt="doce1">
                         <div class="content-text">
-                            <p class="desserts_name">Pudim</p>
+                            <p class="name">Pudim</p>
                             <p>Sobremesa boa</p>
-                            <p class="desserts_price">R$ 10,75</p>
+                            <p class="price">R$ 10,75</p>
+                            <ion-icon  name="checkmark-circle-outline"></ion-icon>
                         </div>
                     </div>
     
-                    <div class="inner-content" onclick="select_items(1,'desserts')">
+                    <div class="inner-content" onclick="select_desserts(this);isAllowButton()">
                         <img src="imgs/doce2.png" alt="doce2">
                         <div class="content-text">
-                            <p class="desserts_name">Torta Belga</p>
+                            <p class="name">Torta Belga</p>
                             <p>Sobremesa boa</p>
-                            <p class="desserts_price">R$ 12,75</p>
+                            <p class="price">R$ 12,75</p>
+                            <ion-icon  name="checkmark-circle-outline"></ion-icon>
                         </div>
                     </div>
     
-                    <div class="inner-content" onclick="select_items(2,'desserts')">
+                    <div class="inner-content" onclick="select_desserts(this);isAllowButton()">
                         <img src="imgs/doce3.png" alt="doce3">
                         <div class="content-text">
-                            <p class="desserts_name">Torta de limão</p>
+                            <p class="name">Torta de limão</p>
                             <p>Sobremesa boa</p>
-                            <p class="desserts_price">R$ 15,50</p>
+                            <p class="price">R$ 15,50</p>
+                            <ion-icon  name="checkmark-circle-outline"></ion-icon>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section id="box-order" class="confirm_order">
-                <span>Confirme seu pedido</span>
-                <span>
-                    <p>Prato</p>
-                    <p>Preço</p>
-                </span>
-
-                <span>
-                    <p>bebida</p>
-                    <p>Preço</p>
-                </span>
-
-                <span>
-                    <p>sobremesa</p>
-                    <p>Preço</p>
-                </span>
-
-                <span>
-                    <p>TOTAL</p>
-                    <p>VALOR</p>
-                </span>
-
-                <button id="confirm-order"  type="button" > <a class="link" href="">Tudo certo, pode pedir!</a></button>
-                <button id="cancel-order"  type="button" >Cancelar</button>
             </section>
             
     </main>
 
+    <section class="confirm_order_box">
+        <span>Confirme seu pedido</span>
+        <span>
+            <p>Prato</p>
+            <p>Preço</p>
+        </span>
+
+        <span>
+            <p>bebida</p>
+            <p>Preço</p>
+        </span>
+
+        <span>
+            <p>sobremesa</p>
+            <p>Preço</p>
+        </span>
+
+        <span>
+            <p>TOTAL</p>
+            <p>VALOR</p>
+        </span>
+
+        <button class="confirm-order"  type="button" > <a class="link" href="" onclick="sendOrder()">Tudo certo, pode pedir!</a></button>
+        <button class="cancel-order"  type="button" onclick="RemoveConfirmBox()" >Cancelar</button>
+    </section>
+
     
     <footer class="bottom-content">
-        <button id="send-order" class="button-order" type="button" disabled>Selecione os 3 itens para fechar o pedido</button>
+        <button class="button-order" type="button" disabled onclick="callConfirmBox()">Selecione os 3 itens para fechar o pedido</button>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
