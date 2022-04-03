@@ -73,8 +73,8 @@ ion-icon {
 
 .check {
     display: inherit;
-    color: white;
-    background: #32B72F;
+    color: #32B72F;
+    background: white;
     border-radius: 50%;
     position: absolute;
     bottom: 0;
